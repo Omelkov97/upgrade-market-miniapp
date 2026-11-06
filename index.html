@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101114">
+  <title>Upgrade Market</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">U</div>
+      <div class="brand-copy"><div class="brand-name">UPGRADE <span>MARKET</span></div><div class="brand-subtitle">Приложения для iPhone</div></div>
+      <button class="avatar" id="profileBtn" aria-label="Профиль">П</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="live-dot"></span> DIGITAL STORE</div>
+        <h1>Больше возможностей.<br><span>Один магазин.</span></h1>
+        <p>Подборка приложений и полезных инструментов для вашего iPhone.</p>
+        <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      </section>
+
+      <section class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search" placeholder="Найти приложение..." autocomplete="off">
+        <button id="clearSearch" class="clear-search" aria-label="Очистить">×</button>
+      </section>
+
+      <section class="section">
+        <div class="section-heading"><div><div class="section-kicker">НАВИГАЦИЯ</div><h2>Категории</h2></div></div>
+        <div class="categories" id="categories"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div><div class="section-kicker">ВЫБОР РЕДАКЦИИ</div><h2 id="catalogTitle">Популярное</h2></div>
+          <button class="text-button" id="allBtn">Все приложения <span>↗</span></button>
+        </div>
+        <div class="product-list" id="productList"></div>
+        <div class="empty-state hidden" id="emptyState">Ничего не найдено. Попробуйте изменить запрос.</div>
+      </section>
+
+      <section class="note-card">
+        <div class="note-icon">✦</div><div><strong>Проверенная информация</strong><p>Перед покупкой смотрите совместимость, способ установки и условия распространения каждого приложения.</p></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-tab="home"><span>⌂</span><small>Главная</small></button>
+      <button class="nav-item" data-tab="catalog"><span>▦</span><small>Каталог</small></button>
+      <button class="nav-item" data-tab="orders"><span>▤</span><small>Заказы</small></button>
+      <button class="nav-item" data-tab="profile"><span>◉</span><small>Профиль</small></button>
+    </nav>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <article class="detail-modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+  <div class="toast hidden" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
