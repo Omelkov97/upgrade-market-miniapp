@@ -1,5 +1,6 @@
 
 const tg = window.Telegram?.WebApp;
+
 if (tg) {
   tg.ready();
   tg.expand();
@@ -10,6 +11,7 @@ const root = document.documentElement;
 function setTheme() {
   const scheme = tg?.colorScheme ||
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
   root.dataset.theme = scheme;
 }
 
@@ -31,10 +33,11 @@ const products = [
     desc: 'Покупки, продажи и объявления',
     category: 'market',
     icon: 'A',
-    tone: 'blue',
-    version: 'Официальный источник',
+    iconUrl: 'https://www.google.com/s2/favicons?domain=avito.ru&sz=128',
+    version: 'Официальный сайт',
+    sourceLabel: 'Официальный сайт',
     compat: 'iPhone и iOS',
-    method: 'Доступность приложения в App Store может меняться. Не удаляйте уже установленное приложение. Для новых пользователей доступен официальный сайт.',
+    method: 'Откройте официальный сайт Авито в Safari. Доступность приложения в App Store может меняться. Не устанавливайте приложения-клоны.',
     description: 'Авито — сервис объявлений, где можно покупать и продавать товары, искать услуги, недвижимость и автомобили.',
     url: 'https://www.avito.ru/',
     actionLabel: 'Открыть Авито'
@@ -45,10 +48,11 @@ const products = [
     desc: 'Социальная сеть, музыка и видео',
     category: 'social',
     icon: 'VK',
-    tone: 'blue',
-    version: 'Официальный источник',
+    iconUrl: 'https://www.google.com/s2/favicons?domain=vk.com&sz=128',
+    version: 'Официальный сайт',
+    sourceLabel: 'Официальный сайт',
     compat: 'iPhone и iOS',
-    method: 'Проверьте доступность официального приложения в App Store. Не устанавливайте приложения-клоны. Официальный сайт доступен через Safari.',
+    method: 'Проверьте доступность официального приложения в App Store. Если оно недоступно, используйте официальный сайт через Safari. Не устанавливайте приложения-клоны.',
     description: 'ВКонтакте — социальная сеть для общения, публикаций, видео, музыки и сообществ.',
     url: 'https://vk.com/',
     actionLabel: 'Открыть ВКонтакте'
@@ -59,11 +63,12 @@ const products = [
     desc: 'Мессенджер для общения и звонков',
     category: 'messengers',
     icon: 'M',
-    tone: 'green',
+    iconUrl: 'https://www.google.com/s2/favicons?domain=max.ru&sz=128',
     version: 'Официальная инструкция',
-    compat: 'iOS 15 и новее для приложения',
-    method: 'По информации MAX, приложение сейчас недоступно в App Store. Если оно уже установлено, не удаляйте его. Для новых пользователей доступна веб-версия.',
-    description: 'MAX — мессенджер для сообщений, звонков и обмена файлами. Официальная справка объясняет доступные способы использования на iPhone.',
+    sourceLabel: 'Официальная справка',
+    compat: 'iOS 15 и новее',
+    method: 'Приложение MAX сейчас недоступно в App Store. Если оно уже установлено, не удаляйте его: повторная установка может быть невозможна. Для новых пользователей доступна веб-версия web.max.ru. Её можно добавить на экран «Домой» через Safari.',
+    description: 'MAX — мессенджер для сообщений, звонков и обмена файлами. На iPhone можно пользоваться официальной веб-версией.',
     url: 'https://help.max.ru/help/about/ustanovka_i_registraciya_v_max/gde_i_kak_skachat_prilozhenie_max',
     actionLabel: 'Открыть инструкцию MAX'
   },
@@ -73,12 +78,13 @@ const products = [
     desc: 'Банковские услуги и платежи',
     category: 'banks',
     icon: 'С',
-    tone: 'green',
+    iconUrl: 'https://www.google.com/s2/favicons?domain=sber.ru&sz=128',
     version: 'Официальная инструкция',
+    sourceLabel: 'Официальная справка',
     compat: 'iPhone и iOS',
-    method: 'Используйте только официальный портал Сбера и следуйте инструкции для iOS. Не скачивайте банковские файлы из неизвестных источников.',
-    description: 'СберБанк Онлайн — приложение для управления счетами, картами и платежами. Инструкция по установке опубликована на официальном портале Сбера.',
-    url: 'https://sberapps.sber.ru/instruction/android',
+    method: 'Официальный портал Сбера предлагает владельцам iPhone пользоваться веб-версией через Safari или обратиться в отделение для установки приложения. Если приложение уже установлено, не удаляйте его без необходимости.',
+    description: 'СберБанк Онлайн — сервис для управления счетами, картами и платежами. Используйте только официальный сайт банка и его инструкции.',
+    url: 'https://apps.sber.ru/apps/sberbank-online/help/',
     actionLabel: 'Открыть инструкцию Сбера'
   },
   {
@@ -87,11 +93,12 @@ const products = [
     desc: 'Банк, карты и переводы',
     category: 'banks',
     icon: 'Т',
-    tone: 'orange',
+    iconUrl: 'https://www.google.com/s2/favicons?domain=tbank.ru&sz=128',
     version: 'Официальная инструкция',
+    sourceLabel: 'Официальная справка',
     compat: 'iPhone и iOS',
-    method: 'Т-Банк предлагает официальный способ быстрого доступа на iPhone через Safari: открыть сайт банка, нажать «Поделиться» и выбрать «На экран Домой».',
-    description: 'Т-Банк — банковские услуги, карты, переводы и управление финансами. Банк публикует официальную инструкцию для iPhone.',
+    method: 'Т-Банк предлагает официальный способ быстрого доступа на iPhone через Safari: откройте сайт банка, нажмите «Поделиться» и выберите «На экран Домой».',
+    description: 'Т-Банк — банковские услуги, карты, переводы и управление финансами. Банк публикует официальные инструкции для iPhone.',
     url: 'https://www.tbank.ru/apps/pwa/',
     actionLabel: 'Открыть инструкцию Т-Банка'
   },
@@ -101,10 +108,11 @@ const products = [
     desc: 'Банковские услуги и платежи',
     category: 'banks',
     icon: 'А',
-    tone: 'orange',
+    iconUrl: 'https://www.google.com/s2/favicons?domain=alfabank.ru&sz=128',
     version: 'Официальная инструкция',
+    sourceLabel: 'Официальная справка',
     compat: 'iPhone и iOS',
-    method: 'Альфа-Банк предлагает владельцам iPhone использовать Альфа-Онлайн. Способы доступа и установки описаны на официальном сайте банка.',
+    method: 'Альфа-Банк предлагает владельцам iPhone использовать Альфа-Онлайн. Актуальные способы доступа и установки описаны на официальном сайте банка.',
     description: 'Альфа-Банк — управление счетами, картами и переводами. Используйте только официальные инструкции банка.',
     url: 'https://alfabank.ru/help/t/retail/debitcards/alfa-karta-mir/mobilnoe-prilozhenie-i-alfa-onlain/kak-ustanovit-mobilnoe-prilozhenie/',
     actionLabel: 'Открыть инструкцию Альфа-Банка'
@@ -115,6 +123,22 @@ let activeCategory = 'all';
 let currentTab = 'home';
 
 const $ = id => document.getElementById(id);
+
+function renderIcon(product) {
+  return `
+    <div class="app-icon">
+      <img
+        src="${product.iconUrl}"
+        alt="${product.name}"
+        loading="lazy"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"
+      >
+      <span style="display:none;width:100%;height:100%;place-items:center;font-weight:800">
+        ${product.icon}
+      </span>
+    </div>
+  `;
+}
 
 function renderCategories() {
   $('categories').innerHTML = categories.map(c => `
@@ -136,11 +160,12 @@ function renderProducts() {
 
   $('productList').innerHTML = filtered.map(p => `
     <article class="product-card">
-      <div class="app-icon ${p.tone}">${p.icon}</div>
+      ${renderIcon(p)}
       <div class="product-info">
         <div class="product-name">${p.name}</div>
         <div class="product-desc">${p.desc}</div>
         <div class="product-meta">iPhone · ${p.version}</div>
+        <div class="official-label">✓ ${p.sourceLabel}</div>
       </div>
       <button class="product-action" data-product="${p.id}">
         Подробнее
@@ -149,6 +174,7 @@ function renderProducts() {
   `).join('');
 
   $('emptyState').classList.toggle('hidden', filtered.length > 0);
+
   $('catalogTitle').textContent =
     activeCategory === 'all'
       ? 'Популярное'
@@ -158,7 +184,10 @@ function renderProducts() {
 function toast(message) {
   $('toast').textContent = message;
   $('toast').classList.remove('hidden');
-  setTimeout(() => $('toast').classList.add('hidden'), 2300);
+
+  setTimeout(() => {
+    $('toast').classList.add('hidden');
+  }, 2300);
 }
 
 function openOfficial(url) {
@@ -175,12 +204,14 @@ function openProduct(id) {
 
   $('modalContent').innerHTML = `
     <div class="detail-head">
-      <div class="app-icon ${p.tone}">${p.icon}</div>
+      ${renderIcon(p)}
       <div>
         <div class="detail-title">${p.name}</div>
         <div class="detail-sub">${p.desc}</div>
       </div>
     </div>
+
+    <div class="official-label">✓ ${p.sourceLabel}</div>
 
     <p class="detail-copy">${p.description}</p>
 
@@ -254,6 +285,7 @@ document.querySelectorAll('.nav-item').forEach(b => {
       activeCategory = 'all';
       renderCategories();
       renderProducts();
+      $('searchInput').value = '';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       toast(
