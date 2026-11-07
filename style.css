@@ -1,3 +1,111 @@
-:root{color-scheme:light dark;--bg:#f4f5f7;--surface:#fff;--surface2:#eceef2;--text:#17191e;--muted:#777d88;--line:rgba(30,35,45,.09);--accent:#5b78ff;--accent2:#9c75ff;--shadow:0 12px 36px rgba(20,25,45,.08)}
-:root[data-theme="dark"]{--bg:#0e1014;--surface:#171a20;--surface2:#20242d;--text:#f4f5f8;--muted:#9ba2af;--line:rgba(255,255,255,.09);--accent:#8295ff;--accent2:#bd8cff;--shadow:0 16px 42px rgba(0,0,0,.24)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;transition:background .2s,color .2s}.app-shell{max-width:620px;min-height:100dvh;margin:0 auto;padding:env(safe-area-inset-top) 18px calc(92px + env(safe-area-inset-bottom));overflow:hidden}.topbar{height:70px;display:flex;align-items:center;gap:11px}.brand-mark{width:39px;height:39px;border-radius:13px;background:linear-gradient(140deg,#8ca0ff,#7553e9);display:grid;place-items:center;color:white;font-size:23px;font-weight:850;box-shadow:0 7px 18px #6d78d544}.brand-name{font-size:13px;font-weight:850;letter-spacing:1.2px}.brand-name span{color:var(--accent)}.brand-subtitle{font-size:11px;color:var(--muted);margin-top:3px}.avatar{margin-left:auto;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--text);font-weight:700}.hero{position:relative;overflow:hidden;padding:27px 23px 29px;border-radius:25px;background:radial-gradient(circle at 90% 15%,#657cff 0,transparent 34%),linear-gradient(125deg,#171d36,#282044 65%,#3a2855);color:white;min-height:218px;box-shadow:var(--shadow)}.eyebrow{font-size:9px;letter-spacing:2px;font-weight:800;color:#c4ceff;display:flex;align-items:center;gap:7px}.live-dot{width:6px;height:6px;background:#8dffcf;border-radius:50%;box-shadow:0 0 10px #8dffcf}.hero h1{font-size:30px;line-height:1.08;letter-spacing:-1.1px;margin:19px 0 10px;position:relative;z-index:1}.hero h1 span{color:#aab7ff}.hero p{font-size:12px;line-height:1.55;color:#d1d5e8;max-width:260px;margin:0;position:relative;z-index:1}.hero-orb{position:absolute;border-radius:50%;border:1px solid #ffffff22}.orb-one{width:155px;height:155px;right:-33px;bottom:-75px}.orb-two{width:100px;height:100px;right:12px;bottom:-48px}.search-wrap{height:49px;margin:19px 0 26px;background:var(--surface);border:1px solid var(--line);border-radius:15px;display:flex;align-items:center;padding:0 14px;gap:9px;box-shadow:var(--shadow)}.search-icon{font-size:25px;color:var(--muted);transform:rotate(-20deg)}.search-wrap input{min-width:0;flex:1;border:0;outline:0;background:transparent;color:var(--text);font:inherit;font-size:13px}.search-wrap input::placeholder{color:var(--muted)}.clear-search{border:0;background:none;color:var(--muted);font-size:21px}.section{margin:0 0 27px}.section-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:14px}.section-kicker{font-size:9px;font-weight:800;letter-spacing:1.6px;color:var(--accent)}h2{font-size:21px;letter-spacing:-.5px;margin:4px 0 0}.text-button{border:0;background:none;color:var(--accent);font-size:11px;font-weight:700;padding:5px 0}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.category{border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:12px 4px 10px;text-align:center;color:var(--text);min-width:0}.category .cat-icon{width:36px;height:36px;margin:0 auto 7px;border-radius:12px;background:var(--surface2);display:grid;place-items:center;font-size:18px}.category small{font-size:10px;font-weight:650}.category.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}.product-list{display:grid;gap:10px}.product-card{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:var(--shadow)}.app-icon{width:53px;height:53px;flex:0 0 53px;border-radius:15px;display:grid;place-items:center;font-size:24px;color:white;background:linear-gradient(140deg,#647dff,#a16ce8)}.app-icon.green{background:linear-gradient(140deg,#1dbd9a,#087d83)}.app-icon.orange{background:linear-gradient(140deg,#ffad58,#e45d65)}.app-icon.blue{background:linear-gradient(140deg,#3ca8d9,#4056c9)}.product-info{min-width:0;flex:1}.product-name{font-size:13px;font-weight:760}.product-desc{font-size:10px;color:var(--muted);margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.product-meta{font-size:9px;color:var(--muted);margin-top:7px}.product-action{border:0;border-radius:11px;background:var(--surface2);color:var(--accent);padding:9px 11px;font-weight:800;font-size:11px}.empty-state{text-align:center;padding:25px;color:var(--muted);font-size:12px}.hidden{display:none!important}.note-card{display:flex;gap:12px;padding:15px;border-radius:17px;background:var(--surface2);margin:7px 0 18px}.note-icon{font-size:20px;color:var(--accent)}.note-card strong{font-size:11px}.note-card p{font-size:10px;line-height:1.5;color:var(--muted);margin:5px 0 0}.bottom-nav{position:fixed;z-index:5;bottom:0;left:50%;transform:translateX(-50%);width:min(620px,100%);padding:10px 18px calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:space-around;background:color-mix(in srgb,var(--surface) 91%,transparent);backdrop-filter:blur(18px);border-top:1px solid var(--line)}.nav-item{border:0;background:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px;min-width:55px}.nav-item span{font-size:20px}.nav-item small{font-size:9px}.nav-item.active{color:var(--accent)}.modal-backdrop{position:fixed;inset:0;z-index:10;background:#0009;display:flex;align-items:end;justify-content:center}.detail-modal{position:relative;width:min(620px,100%);max-height:88dvh;overflow:auto;background:var(--surface);color:var(--text);border-radius:24px 24px 0 0;padding:25px 20px calc(25px + env(safe-area-inset-bottom));animation:rise .2s ease}.modal-close{position:absolute;right:16px;top:13px;border:0;background:var(--surface2);color:var(--text);border-radius:50%;width:30px;height:30px;font-size:20px}.detail-head{display:flex;align-items:center;gap:13px;padding:12px 30px 15px 0}.detail-head .app-icon{width:64px;height:64px;flex-basis:64px}.detail-title{font-size:18px;font-weight:800}.detail-sub{font-size:11px;color:var(--muted);margin-top:5px}.detail-copy{font-size:12px;line-height:1.6;color:var(--muted)}.detail-label{font-size:10px;color:var(--muted);margin:15px 0 5px}.detail-value{font-size:12px;font-weight:650}.primary-button{width:100%;border:0;border-radius:14px;background:linear-gradient(100deg,#617cff,#9872f0);color:white;padding:14px;font-weight:800;margin-top:20px}.toast{position:fixed;z-index:20;bottom:100px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:11px 16px;border-radius:12px;font-size:11px;white-space:nowrap}@keyframes rise{from{transform:translateY(30px);opacity:.7}to{transform:translateY(0);opacity:1}}@media(min-width:520px){.hero h1{font-size:36px}.product-list{grid-template-columns:1fr 1fr}.product-card{align-items:flex-start;flex-wrap:wrap}.product-action{margin-left:65px}.categories{gap:12px}}
+/* PREMIUM APP ICONS */
+.app-icon {
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  background: var(--surface2);
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.app-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+.app-icon.green,
+.app-icon.orange,
+.app-icon.blue {
+  background: var(--surface2);
+}
+
+/* OFFICIAL SOURCE LABEL */
+.official-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 7px;
+  padding: 4px 7px;
+  border-radius: 7px;
+  background: rgba(35, 190, 135, .11);
+  color: #20a477;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+/* CARD IMPROVEMENTS */
+.product-card {
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+.product-card:active {
+  transform: scale(.985);
+}
+
+.product-action {
+  white-space: nowrap;
+  transition: background .2s ease;
+}
+
+.product-action:active {
+  background: var(--accent);
+  color: white;
+}
+
+/* DETAIL WINDOW */
+.detail-head .app-icon {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.detail-modal {
+  box-shadow: 0 -10px 45px rgba(0,0,0,.15);
+}
+/* FIX APP ICON SIZE */
+.app-icon {
+  width: 53px !important;
+  height: 53px !important;
+  min-width: 53px;
+  min-height: 53px;
+  max-width: 53px;
+  max-height: 53px;
+  flex: 0 0 53px !important;
+  overflow: hidden !important;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  padding: 0;
+}
+
+.app-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: inherit;
+}
+
+.detail-head .app-icon {
+  width: 64px !important;
+  height: 64px !important;
+  min-width: 64px;
+  min-height: 64px;
+  max-width: 64px;
+  max-height: 64px;
+  flex: 0 0 64px !important;
+}
+
+.product-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.product-info {
+  min-width: 0;
+  overflow: hidden;
+}
